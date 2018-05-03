@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="Youtube.PageVideo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Youtube"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.TopAppBar>
+        <CommandBar>
+            <AppBarButton x:Name="btnHomePage" Icon="Back" Label="Back" Click="btnHomePage_Click"></AppBarButton>
+            <AppBarButton Icon="Filter" Label="240p" Click="btn240p_Click"></AppBarButton>
+            <AppBarButton Icon="Filter" Label="480p" Click="btn480p_Click"></AppBarButton>
+            <AppBarButton Icon="Filter" Label="720p" Click="btn720p_Click"></AppBarButton>
+            <AppBarButton Icon="Filter" Label="1080p" Click="btn1080p_Click"></AppBarButton>
+
+        </CommandBar>
+    </Page.TopAppBar>
+
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <MediaElement x:Name="Player" Width="Auto" AutoPlay="True"
+                      AreTransportControlsEnabled="True"/>
+    </Grid>
+</Page>
